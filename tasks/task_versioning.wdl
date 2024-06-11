@@ -14,7 +14,7 @@ task version_capture {
     workflow_Version="v1.0.0"
     ~{default='' 'export TZ=' + timezone}
     date +"%Y-%m-%d" > TODAY
-    echo "$Workflow_Version" > Workflow_VERSION
+    echo "$workflow_Version" > Workflow_VERSION
   }
   output {
     String date = read_string("TODAY")
